@@ -1,0 +1,54 @@
+/* list-schedule.component.css */
+
+.list-container {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .schedule-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .schedule-item p {
+    margin: 5px 0;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: #45a049;
+  }
+  
+  .pagination button:hover {
+    background-color: #45a049;
+  }
+  .create-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .create-button:hover {
+    background-color: #0056b3;
+  }
+  

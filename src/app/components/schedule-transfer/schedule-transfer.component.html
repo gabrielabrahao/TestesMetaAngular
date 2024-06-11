@@ -1,0 +1,23 @@
+<div class="form-container">
+    <h2>Create New Schedule</h2>
+    <form (submit)="submitSchedule()">
+      <div class="form-group">
+        <label for="originAccount">Origin Account:</label>
+        <input type="text" id="originAccount" name="originAccount" [(ngModel)]="schedule.originAccount" required>
+      </div>
+      <div class="form-group">
+        <label for="destinationAccount">Destination Account:</label>
+        <input type="text" id="destinationAccount" name="destinationAccount" [(ngModel)]="schedule.destinationAccount" required>
+      </div>
+      <div class="form-group">
+        <label for="valueTransfer">Value Transfer:</label>
+        <input type="number" id="valueTransfer" name="valueTransfer" [(ngModel)]="schedule.valueTransfer" required>
+      </div>
+      <div class="form-group">
+        <label for="scheduleDate">Schedule Date:</label>
+        <input type="datetime-local" id="scheduleDate" name="scheduleDate" [(ngModel)]="schedule.scheduleDate" required>
+      </div>
+      <button type="submit">Create</button>
+    </form>
+  </div>
+  

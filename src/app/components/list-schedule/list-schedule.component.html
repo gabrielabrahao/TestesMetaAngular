@@ -1,0 +1,29 @@
+
+
+<div class="list-container" *ngIf="scheduleTransfers && scheduleTransfers.length > 0">
+    <h2>Schedule Transfers</h2> 
+    <button class="create-button" (click)="createSchedule()">Create New Schedule</button>
+    <div class="schedule-item" *ngFor="let transfer of scheduleTransfers">
+      <p>Origin Account : {{ transfer.originAccount }}</p>
+      <p>Destination Account : {{ transfer.destinationAccount }}</p>
+      <p>Transfer Amount : {{ transfer.valueTransfer }} </p>
+      <p>Transfer Amount : {{ transfer.tax }} </p>
+      <p>Schedule Date : {{ transfer.scheduleDate }} </p>
+      <p>Schedule Date Created : {{ transfer.scheduleDateCreated }} </p>
+
+    </div>
+    <div class="pagination">
+      <button *ngFor="let page of totalPagesArray" 
+              [class.active]="page === currentPage" 
+              (click)="onPageChange(page)">{{ page + 1 }}</button>
+    </div>
+  </div>
+  
+  <div class="list-container" *ngIf="scheduleTransfers && scheduleTransfers.length === 0">
+    <p>No schedule transfers found.</p>
+  </div>
+  
+  <div class="list-container" *ngIf="!scheduleTransfers">
+    <p>Loading...</p>
+  </div>
+  
